@@ -7,7 +7,16 @@ export default class Person implements IPerson {
   constructor(name: string, surname: string, email: string) {
     this.name = name;
     this.surname = surname;
-    this.email = email;
+    if (this.validateEmail(email)) {
+      this.email = email;
+    } else {
+      throw new Error('Invalid email!');
+    }
+  }
+
+  validateEmail(email) {
+    var re = /\w+@\w+.\w+/;
+    return re.test(email);
   }
 
   greet() {
