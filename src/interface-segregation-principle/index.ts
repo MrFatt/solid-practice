@@ -11,6 +11,7 @@ const vehicle: VehicleInterface = {
   stopEngine: () => {},
   startRadio: () => {
     console.log('start radio')
+    console.log('playing radio')
   },
   stopRadio: () => {
     console.log('stop radio');
