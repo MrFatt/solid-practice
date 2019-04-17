@@ -1,25 +1,16 @@
-import VehicleInterface from "./IVehicle";
+import RadioInterface from "./IRadio";
 
-const vehicle: VehicleInterface = {
-  getSpeed: () => 0,
-  getVehicleType: () => '',
-  isTaxPayed: () => true,
-  isLightsOn: () => true,
-  isLightsOff: () => true,
-  startEngine: () => {},
-  accelerate: () => 0,
-  stopEngine: () => {},
+const radio: RadioInterface = {
   startRadio: () => {
     console.log('start radio')
-    console.log('playing radio')
   },
   stopRadio: () => {
     console.log('stop radio');
   },
   playCd: () => {
-    console.log('playing');
+    console.log('playing radio');
   }
 };
 
-vehicle.startRadio();
-vehicle.stopRadio();
+radio.startRadio();
+radio.stopRadio();
