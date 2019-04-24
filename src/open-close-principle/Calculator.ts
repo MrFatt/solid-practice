@@ -3,12 +3,14 @@ import Square from './Square';
 
 export default class Calculator<T> {
   public shapes: T[];
+  private areas: number;
   constructor(shapes) {
     this.shapes = shapes;
   }
 
+
   calculateAreas() {
-    return this.shapes.reduce((acc, cur) => {
+    this.areas = this.shapes.reduce((acc, cur) => {
       if (cur instanceof Square) {
         acc += Math.pow(cur.edge, 2);
       } else if (cur instanceof Circle) {
@@ -16,5 +18,9 @@ export default class Calculator<T> {
       }
       return acc;
     }, 0);
+  }
+
+  outputAreas() {
+    console.log(this.areas);
   }
 }

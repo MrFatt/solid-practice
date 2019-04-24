@@ -7,4 +7,6 @@ const square = new Square(2);
 
 const shapes = [circle, square];
 
-console.log(new Calculator(shapes).calculateAreas());
+const calculator = new Calculator(shapes);
+calculator.calculateAreas();
+calculator.outputAreas();
