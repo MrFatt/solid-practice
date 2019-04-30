@@ -1,5 +1,7 @@
 export default class Duck {
-  quack: ()=> void;
+  quack = () => {
+    return 'quack';
+  }
   swim: () => void;
-  display: () => void;
+  display: () => string;
 }
