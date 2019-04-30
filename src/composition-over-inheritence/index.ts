@@ -8,6 +8,3 @@ console.log(mallardDuck.display());
 
 const redHeadDuck = new RedHeadDuck();
 console.log(redHeadDuck.display());
-
-const rubberDuck = new RubberDuck();
-console.log(rubberDuck.fly());
