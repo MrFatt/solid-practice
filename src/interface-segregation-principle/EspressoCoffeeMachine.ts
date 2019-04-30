@@ -4,12 +4,11 @@ export default class BasicCoffeeMachine implements CoffeeMachine {
   groundCoffee: GroundCoffee;
 
   brewFilterCoffee = () => {
-    return {type: 'filter coffee'}
+    throw new Error();
   };
   
-
   brewEspressoCoffee = () => {
-    throw new Error();
+    return {type: 'espresso coffee'}
   };
   
   addGroundCoffee = (newCoffee: GroundCoffee) =>{
