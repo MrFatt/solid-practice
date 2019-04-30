@@ -1,10 +1,17 @@
+import Quackable from './interfaces/Quackable';
+import Flyable from './interfaces/Flyable';
+
 export default class Duck {
-  quack = () => {
-    return 'quack';
-  };
+  quackBehaviour: Quackable;
+  flyBehaviour: Flyable;
+
   swim: () => void;
-  fly = () => {
-    return 'I can fly';
-  };
   display: () => string;
+  
+  performQuack = () => {
+    this.quackBehaviour.quack();
+  };
+  fly = () => {
+    this.flyBehaviour.fly();
+  };
 }
